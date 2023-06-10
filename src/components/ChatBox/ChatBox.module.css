@@ -18,15 +18,3 @@
     border-radius: 5px;
     margin: 15px;
 }
-
-@media only screen and (min-width: 768px) {
-    .chatbox__text {
-        font-size: 1.8rem;
-    }
-}
-
-@media only screen and (min-width: 1280px) {
-    .chatbox__text {
-        font-size: 1rem;
-    }
-}
