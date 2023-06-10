@@ -1,8 +1,21 @@
 import styles from './page.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
+import ChatBox from '@/components/ChatBox/ChatBox';
 
 export default function Home() {
+  let chat = [
+    {
+        "role": "assistant",
+        "content": "Hey, Meatbag"
+    },
+    {
+        "role": "user",
+        "content": "What's up Bender"
+    }
+];
+
+
   return (
     <main className={styles.app}>
       <header>
@@ -11,7 +24,9 @@ export default function Home() {
       </header>
 
       <section className={styles.messages}>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, deserunt?</p>
+      {chat.map((message, i)=> {
+          return message.role  !== "system" && <ChatBox key={`message:${i}`} role={message.role} content={message.content}/>
+        })}
       </section>
 
       <section className={styles.chat_form_container}>
