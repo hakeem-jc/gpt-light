@@ -29,12 +29,14 @@ export default function Home() {
           })}
       </section>
 
-      <section className={styles.chat_form_container}>
+      <footer className={styles.chat_form_container}>
         <form className={styles.chat_form}>
             <input className={styles.chat_input} placeholder='Send a message.'/>
             <FontAwesomeIcon icon={faPaperPlane} className={styles.icon}/>
         </form>
-      </section>
+
+        <p className={styles.credits}>© 2023 Hakeem Clarke</p>
+      </footer>
     </main>
   )
 }
