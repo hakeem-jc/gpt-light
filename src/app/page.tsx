@@ -11,7 +11,7 @@ export default function Home() {
     },
     {
         "role": "user",
-        "content": "What's up Bender"
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     }
 ];
 
@@ -24,9 +24,9 @@ export default function Home() {
       </header>
 
       <section className={styles.messages}>
-      {chat.map((message, i)=> {
-          return message.role  !== "system" && <ChatBox key={`message:${i}`} role={message.role} content={message.content}/>
-        })}
+        {chat.map((message, i)=> {
+            return message.role  !== "system" && <ChatBox key={`message:${i}`} role={message.role} content={message.content}/>
+          })}
       </section>
 
       <section className={styles.chat_form_container}>
