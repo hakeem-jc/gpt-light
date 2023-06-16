@@ -1,4 +1,5 @@
 'use client'
+import { useRef, useEffect } from 'react';
 import styles from './page.module.css';
 import ChatBox from '@/components/ChatBox/ChatBox';
 import Form from '@/components/Form/Form';
@@ -8,6 +9,12 @@ import { ChatType } from '@/interfaces/interfaces';
 export const App = () => {
   const chat = useAppSelector(state => state.chat);
   const is_loading = useAppSelector(state => state.is_loading);
+  const anchor = useRef<HTMLSpanElement>(null);
+  useEffect(() => { 
+    if (anchor.current) {
+      anchor.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [chat]);
 
   const WelcomeMessage = () => {
     return (
@@ -34,6 +41,7 @@ export const App = () => {
                 />
             })}
             {is_loading && <ChatBox role={ChatType.BOT} is_empty={true}/>}
+            <span ref={anchor}></span>
         </section>
 
         <footer className={styles.chat_form_container}>
