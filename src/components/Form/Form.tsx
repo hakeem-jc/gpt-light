@@ -9,14 +9,13 @@ import { setChat } from '@/redux/chatSlice';
 const Form:FC  = () => {
   const [formData, setFormData] = useState({message: '',});
   const dispatch = useAppDispatch();
-  const { chat } = useAppSelector(state => state);
+  const chat = useAppSelector(state => state.chat);
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     let payload = { messages: [...chat,{role:"user", content:formData.message}] };
     dispatch(setChat({role:"user", content:formData.message}));
     
-    // axios.post(`${process.env.ORIGIN}/api/generate`, payload)
     axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/generate`, payload)
     .then((res)=>{
         dispatch(setChat({role:"assistant", content:res.data.result}));

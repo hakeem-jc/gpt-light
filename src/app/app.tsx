@@ -5,7 +5,7 @@ import Form from '@/components/Form/Form';
 import { useAppSelector } from '@/redux/hooks';
 
 export const App = () => {
-  const { chat } = useAppSelector(state => state);
+  const chat = useAppSelector(state => state.chat);
 
   return (
     <main className={styles.app}>
