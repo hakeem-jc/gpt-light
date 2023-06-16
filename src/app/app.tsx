@@ -20,7 +20,7 @@ export const App = () => {
     return (
         <section className={styles.empty_chat_container}>
             <h2 className={styles.title}>Welcome to MiniGPT</h2>
-            <p>A partial open source clone of OpenAI's ChatGPT</p>
+            <p>A partial open source clone of OpenAI&apos;s ChatGPT</p>
             <h3 className={styles.disclaimer}>Important: MiniGPT Light is 100% unaffiliated with OpenAI.</h3>
             <p>Send a message to get started</p>
         </section>
