@@ -16,6 +16,7 @@ const Form:FC  = () => {
     event.preventDefault();
     let payload = { messages: [...chat,{role:"user", content:formData.message}] };
     dispatch(setChat({role:"user", content:formData.message}));
+    setFormData({message: ''});
 
     dispatch(setIsLoading(true));
     axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/generate`, payload)
