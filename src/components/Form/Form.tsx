@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 import { setChat } from '@/redux/chatSlice';
+import { setIsLoading } from '@/redux/LoadingSlice';
 
 const Form:FC  = () => {
   const [formData, setFormData] = useState({message: '',});
@@ -15,14 +16,17 @@ const Form:FC  = () => {
     event.preventDefault();
     let payload = { messages: [...chat,{role:"user", content:formData.message}] };
     dispatch(setChat({role:"user", content:formData.message}));
-    
+
+    dispatch(setIsLoading(true));
     axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/generate`, payload)
     .then((res)=>{
+        dispatch(setIsLoading(false));
         dispatch(setChat({role:"assistant", content:res.data.result}));
         }).catch((err)=>{
+        dispatch(setIsLoading(false));
             console.error(err);
         });
-  };
+    };
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({

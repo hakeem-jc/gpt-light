@@ -1,9 +1,11 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
 import { chat } from './chatSlice';
+import { is_loading } from './LoadingSlice';
 
 
 const rootReducer = combineReducers({
     chat,
+    is_loading
 })
 
 

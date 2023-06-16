@@ -3,11 +3,13 @@ import styles from './page.module.css';
 import ChatBox from '@/components/ChatBox/ChatBox';
 import Form from '@/components/Form/Form';
 import { useAppSelector } from '@/redux/hooks';
+import { ChatType } from '@/interfaces/interfaces';
 
 export const App = () => {
   const chat = useAppSelector(state => state.chat);
+  const is_loading = useAppSelector(state => state.is_loading);
 
-  const EmptyChat = () => {
+  const WelcomeMessage = () => {
     return (
         <section className={styles.empty_chat_container}>
             <h2 className={styles.title}>Welcome to MiniGPT</h2>
@@ -20,15 +22,18 @@ export const App = () => {
 
   return (
     <main className={styles.app}>
-        {/* <header>
-            <h1 className={styles.title}>MiniGPT</h1>
-        </header> */}
-
         <section className={styles.messages}>
-            {chat.length === 0 && <EmptyChat />}
+            {chat.length === 0 && <WelcomeMessage />}
             {chat.length !== 0 && chat.map((message, i)=> {
-                return message.role  !== "system" && <ChatBox key={`message:${i}`} role={message.role} content={message.content}/>
+                return message.role  !== "system" && 
+                <ChatBox 
+                    key={`message:${i}`} 
+                    role={message.role} 
+                    content={message.content}
+                    is_empty={false}
+                />
             })}
+            {is_loading && <ChatBox role={ChatType.BOT} is_empty={true}/>}
         </section>
 
         <footer className={styles.chat_form_container}>

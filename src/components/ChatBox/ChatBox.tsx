@@ -6,23 +6,36 @@ import { ChatType } from '@/interfaces/interfaces';
 import Image from 'next/image';
 
 interface ChatBoxProps {
-    role: string,
-    content: string
+    role?: string,
+    content?: string,
+    is_empty?: boolean
 }
 
 const ChatBox:FC<ChatBoxProps> = (props) => {
-    const roleClassName = props.role === ChatType.BOT ? styles['chatbox--bot'] : '';
+    const roleClassName = props.role === ChatType.BOT ? styles['chatbox-bot'] : '';
   
     return (
         <div className={`${styles.chatbox} ${roleClassName}`}>
-        <div className={styles['chatbox__text-container']}>
-            <Image 
-                src={props.role === ChatType.BOT ? avatar : user}
-                alt={props.role === ChatType.BOT ? "Bot Icon" : "User Icon"}
-                className={styles['chatbox__image']}
-            />
-          <p className={styles['chatbox__text']}>{props.content}</p>
-        </div>
+        {props.is_empty ? 
+            <div className={styles['text-container']}>
+                <Image 
+                    src={avatar}
+                    alt="Bot Icon"
+                    className={styles['image']}
+                />
+                <div className={styles.cursor}></div>
+            </div>
+            :
+            <div className={styles['text-container']}>
+                <Image 
+                    src={props.role === ChatType.BOT ? avatar : user}
+                    alt={props.role === ChatType.BOT ? "Bot Icon" : "User Icon"}
+                    className={styles['image']}
+                />
+            <p className={styles['text']}>{props.content}</p>
+            </div>
+        }
+
       </div>);
 }
 
