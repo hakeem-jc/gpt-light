@@ -1,8 +1,10 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'MiniGPT Light',
+  title: 'MiniGPT',
   description: 'Minimal ChatGPT Clone',
+  author: 'Hakeem Clarke',
+  keywords: 'Next.js, ChatGPT Clone, AI',
 }
 
 export default function RootLayout({
