@@ -6,11 +6,13 @@ import axios from 'axios';
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 import { setChat } from '@/redux/chatSlice';
 import { setIsLoading } from '@/redux/LoadingSlice';
+import { useSnackbar } from 'notistack';
 
 const Form:FC  = () => {
   const [formData, setFormData] = useState({message: '',});
   const dispatch = useAppDispatch();
   const chat = useAppSelector(state => state.chat);
+  const { enqueueSnackbar }= useSnackbar();
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -19,6 +21,7 @@ const Form:FC  = () => {
     setFormData({message: ''});
 
     dispatch(setIsLoading(true));
+    
     axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/generate`, payload)
     .then((res)=>{
         dispatch(setIsLoading(false));
@@ -26,6 +29,15 @@ const Form:FC  = () => {
         }).catch((err)=>{
         dispatch(setIsLoading(false));
             console.error(err);
+
+            enqueueSnackbar('Something went wrong, Try again', {
+              variant: 'error',
+              preventDuplicate: true,
+              anchorOrigin: {
+                vertical: 'bottom',
+                horizontal:'center'
+              }
+            })
         });
     };
 
