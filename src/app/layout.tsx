@@ -1,7 +1,7 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'ChatGPT Light',
+  title: 'MiniGPT Light',
   description: 'Minimal ChatGPT Clone',
 }
 

@@ -7,8 +7,21 @@
   height: 100vh;
 }
 
-.app__title {
+.title {
   font-weight: 500;
+  color: white;
+}
+
+.empty_chat_container {
+  width: 90;
+  text-align: center;
+  color: #9CA3AF;
+  padding: 0.1rem;
+}
+
+.disclaimer {
+  font-weight: 500;
+  color: white;
 }
 
 .messages {
