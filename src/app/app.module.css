@@ -27,7 +27,7 @@
 .messages {
   text-align: left;
   width: 100%;
-  max-height: 80%;
+  max-height: 85%;
   overflow-y: scroll;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
@@ -41,12 +41,12 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  padding-top: 1.5rem;
-  background-color: #353641;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: #343541;
+  height: 12%;
 }
 
 .credits {
