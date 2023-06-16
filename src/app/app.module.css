@@ -13,10 +13,11 @@
 }
 
 .empty_chat_container {
-  width: 90;
+  width: 90%;
   text-align: center;
   color: #9CA3AF;
   padding: 0.1rem;
+  margin: auto;
 }
 
 .disclaimer {
