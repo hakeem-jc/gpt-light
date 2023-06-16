@@ -19,9 +19,9 @@ export const App = () => {
   const WelcomeMessage = () => {
     return (
         <section className={styles.empty_chat_container}>
-            <h2 className={styles.title}>Welcome to MiniGPT</h2>
+            <h2 className={styles.title}>Welcome to GPT Light</h2>
             <p>A partial open source clone of OpenAI&apos;s ChatGPT</p>
-            <h3 className={styles.disclaimer}>Important: MiniGPT Light is 100% unaffiliated with OpenAI.</h3>
+            <h3 className={styles.disclaimer}>Important: GPT Light is 100% unaffiliated with OpenAI.</h3>
             <p>Send a message to get started</p>
         </section>
     )
