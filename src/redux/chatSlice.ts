@@ -2,9 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 import { Message } from '../interfaces/interfaces';
 
-const messages:Message[] = [
-    // {"role": "system", "content": "You're a virtual assistant. Answer the user in the language they speak in and have a conversation"},
-]
+const messages:Message[] = []
 
 const setChatSlice = createSlice({
     name: 'chat',
