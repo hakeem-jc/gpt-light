@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { store } from '@/redux/store';
 import Page from '@/app/page';
@@ -15,6 +15,17 @@ describe('Page', () => {
       </Provider>
     );
 
+  });
+
+  test('renders welcome message when chat is empty', () => {
+    render(
+      <Provider store={store}>
+        <Page />
+      </Provider>
+    );
+
+    const welcomeMessage = screen.getByText('Welcome to GPT Light');
+    expect(welcomeMessage).toBeInTheDocument();
   });
 
   test('scrolls to the bottom when chat updates', () => {
