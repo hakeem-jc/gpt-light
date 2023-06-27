@@ -1,34 +1,75 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+<div  align="center">
 
-First, run the development server:
+<a  href="https://github.com/hakeem-jc/gpt-light">
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+</a>
+
+  
+
+<h3  align="center">GPT Light</h3>
+
+  
+<p  align="center">
+
+Minimalist Chat GPT Clone
+Built with Next.js, Redux and TypeScript
+
+<a  href="https://gpt-light.vercel.app/">View Demo</a>
+
+</p>
+
+</div>
+
+<!-- ABOUT THE PROJECT -->
+
+## About The Project
+The application provides an interface to query the GPT 3.5 large language model
+  
+
+### Built With 
+[![Next][Next.js]][Next-url]
+
+
+<!-- GETTING STARTED -->
+
+### Prerequisites
+
+Running the application locally requires a .env file with the local server URL and an Open AI key.
+ 
+### Installation
+
+1. Sign up and get an Open API Key at [https://platform.openai.com/overview](https://platform.openai.com/overview)
+
+2. Clone the repo
+
+```sh
+git clone https://github.com/hakeem-jc/gpt-light.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Install NPM packages
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+4. Create `.env` file at root and enter environment variables
 
-## Learn More
+```Sh
+NEXT_PUBLIC_API_URL=http://localhost:3000
+OPENAI_API_KEY="OPEN AI KEY"
+```
 
-To learn more about Next.js, take a look at the following resources:
+5. Start the project server
+```sh
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<!-- MARKDOWN LINKS & IMAGES -->
+[linkedin-url]: https://www.linkedin.com/in/hakeemclarke/
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[Next-url]: https://nextjs.org/
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
