@@ -20,6 +20,7 @@
     "axios": "^1.4.0",
     "eslint": "8.42.0",
     "eslint-config-next": "13.4.4",
+    "logrocket": "^4.0.3",
     "next": "13.4.4",
     "nextjs-cors": "^2.1.2",
     "notistack": "^3.0.1",

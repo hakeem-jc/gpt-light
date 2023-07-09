@@ -5,6 +5,8 @@ import ChatBox from '@/components/ChatBox/ChatBox';
 import Form from '@/components/Form/Form';
 import { useAppSelector } from '@/redux/hooks';
 import { ChatType } from '@/interfaces/interfaces';
+import LogRocket from 'logrocket';
+LogRocket.init('uwhnan/gpt-light');
 
 export const App = () => {
   const chat = useAppSelector(state => state.chat);
