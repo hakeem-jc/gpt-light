@@ -1,5 +1,5 @@
 import { FC, FormEvent, useState } from 'react';
-import styles from './Form.module.css';
+import styles from './Form.module.scss';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';

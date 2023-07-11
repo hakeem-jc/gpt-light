@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import styles from './ChatBox.module.css';
+import styles from './ChatBox.module.scss';
 import user from '@/assets/user.png';
 import avatar from '@/assets/bot.png';
 import { ChatType } from '@/interfaces/interfaces';

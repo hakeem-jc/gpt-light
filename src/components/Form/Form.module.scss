@@ -1,0 +1,35 @@
+.chat_form {
+  width: 80%;
+  background-color: #40414F;
+  border-radius: 0.75rem;
+  display: flex;
+  padding: 0.6rem 1rem;
+
+  .chat_input {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 1rem;
+    resize: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .form_button {
+    background: transparent;
+    border: none;
+    font-size: 1.4rem;
+    color: #606170;
+    padding: 0.4rem 0.5rem;
+    cursor: pointer;
+    border-radius: 8px;
+
+    &:hover {
+      background-color: #19C37D;
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.chatbox {
+    width: 100%;
+    background-color: #343541;
+  
+    .text-container {
+      display: flex;
+      align-items: flex-start;
+    }
+  
+    .text {
+      padding-right: 1rem;
+      line-height: 1.5rem;
+    }
+  
+    &-bot {
+      background-color: #444654;
+    }
+  
+    .image {
+      width: 45px;
+      height: 45px;
+      border-radius: 5px;
+      margin: 1.2rem 1.5rem 1rem 1rem;
+    }
+  
+    .cursor {
+      background: white;
+      line-height: 1rem;
+      animation: blink 0.8s infinite;
+      -webkit-animation: blink 0.8s infinite;
+      width: 0.7rem;
+      height: 1rem;
+      margin-top: 1.1rem;
+    }
+  }
+  
+  @keyframes blink {
+    0% {
+      background: #444654;
+    }
+    50% {
+      background: white;
+    }
+    100% {
+      background: #444654;
+    }
+  }
+  
+  @-webkit-keyframes blink {
+    0% {
+      background: #444654;
+    }
+    50% {
+      background: white;
+    }
+    100% {
+      background: #444654;
+  }
+}  

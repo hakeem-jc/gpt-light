@@ -1,6 +1,6 @@
 'use client'
 import { useRef, useEffect } from 'react';
-import styles from './app.module.css';
+import styles from './app.module.scss';
 import ChatBox from '@/components/ChatBox/ChatBox';
 import Form from '@/components/Form/Form';
 import { useAppSelector } from '@/redux/hooks';
