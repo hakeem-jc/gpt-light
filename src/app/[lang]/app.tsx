@@ -1,10 +1,11 @@
 'use client'
 import { useRef, useEffect } from 'react';
-import styles from './app.module.scss';
+import styles from '@/app/app.module.scss';
 import ChatBox from '@/components/ChatBox/ChatBox';
 import Form from '@/components/Form/Form';
 import { useAppSelector } from '@/redux/hooks';
 import { ChatType } from '@/interfaces/interfaces';
+import { DictionaryEntry } from '../../../content';
 import LogRocket from 'logrocket';
 LogRocket.init('uwhnan/gpt-light');
 
