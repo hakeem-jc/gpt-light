@@ -5,10 +5,11 @@ import ChatBox from '@/components/ChatBox/ChatBox';
 import Form from '@/components/Form/Form';
 import { useAppSelector } from '@/redux/hooks';
 import { ChatType } from '@/interfaces/interfaces';
+import { dictionary } from '../../../content';
 import LogRocket from 'logrocket';
 LogRocket.init('uwhnan/gpt-light');
 
-export const App = () => {
+export const App = (params:any) => {
   const chat = useAppSelector(state => state.chat);
   const is_loading = useAppSelector(state => state.is_loading);
   const anchor = useRef<HTMLSpanElement>(null);
@@ -18,10 +19,13 @@ export const App = () => {
     }
   }, [chat]);
 
+  // console.log(dictionary);
+  // console.log(dictionary[params.lang])
+
   const WelcomeMessage = () => {
     return (
         <section className={styles.empty_chat_container}>
-            <h2 className={styles.title}>Welcome to GPT Light</h2>
+            <h2 className={styles.title}>{dictionary[params.lang]?.welcome_text}</h2>
             <p>A partial open source clone of OpenAI&apos;s ChatGPT</p>
             <h3 className={styles.disclaimer}>Important: GPT Light is 100% unaffiliated with OpenAI.</h3>
             <p>Send a message to get started</p>
