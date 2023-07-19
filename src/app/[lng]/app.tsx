@@ -5,13 +5,17 @@ import ChatBox from '@/components/ChatBox/ChatBox';
 import Form from '@/components/Form/Form';
 import { useAppSelector } from '@/redux/hooks';
 import { ChatType } from '@/interfaces/interfaces';
+import { useTranslation } from '../i18n';
 import LogRocket from 'logrocket';
 LogRocket.init('uwhnan/gpt-light');
 
-export const App = (lng:any) => {
+export const App = async (lng:any) => {
   const chat = useAppSelector(state => state.chat);
   const is_loading = useAppSelector(state => state.is_loading);
   const anchor = useRef<HTMLSpanElement>(null);
+  const { t } = await useTranslation(lng)
+
+
   useEffect(() => { 
     if (anchor.current) {
       anchor.current.scrollIntoView({ behavior: 'smooth' });
