@@ -4,11 +4,12 @@ import { store } from '@/redux/store';
 import { App } from './app';
 import { SnackbarProvider, enqueueSnackbar } from 'notistack';
 
-export default function Page() {
+// @ts-ignore
+export default function Page({ params: { lng } }) {
   return (
     <Provider store={store}>
       <SnackbarProvider>
-        <App/>
+        <App lang={lng}/>
       </SnackbarProvider>
     </Provider>
   )

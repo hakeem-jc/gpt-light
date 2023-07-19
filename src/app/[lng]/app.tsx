@@ -8,7 +8,7 @@ import { ChatType } from '@/interfaces/interfaces';
 import LogRocket from 'logrocket';
 LogRocket.init('uwhnan/gpt-light');
 
-export const App = () => {
+export const App = (lng:any) => {
   const chat = useAppSelector(state => state.chat);
   const is_loading = useAppSelector(state => state.is_loading);
   const anchor = useRef<HTMLSpanElement>(null);

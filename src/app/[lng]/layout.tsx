@@ -1,4 +1,10 @@
 import './globals.scss';
+import { dir } from 'i18next';
+import { languages } from '../i18n/settings';
+
+export async function generateStaticParams() {
+  return languages.map((lng) => ({ lng }))
+}
 
 export const metadata = {
   title: 'GPT Light',
@@ -8,12 +14,15 @@ export const metadata = {
 }
 
 export default function RootLayout({
-  children,
+  // @ts-ignore
+  children, params: {
+    lng
+  }
 }: {
-  children: React.ReactNode
+  children: React.ReactNode,
 }) {
   return (
-    <html lang="en">
+    <html lang={lng} dir={dir(lng)}>
       <body>{children}</body>
     </html>
   )
