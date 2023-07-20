@@ -23,17 +23,10 @@ export const App = () => {
         <>
           <ChatBox 
                 role={ChatType.BOT} 
-                content={'Hey. Ask me anything. Here\'s a good example of a message:'}
-                is_empty={false}
-          />
-          <ChatBox 
-                role={ChatType.BOT} 
-                content={'What are your thoughts on the impact of technology on society and its potential implications for the future?'}
-                is_empty={false}
-          />
-          <ChatBox 
-                role={ChatType.BOT} 
-                content={`Send a message to get started`}
+                content={`Hey. Ask me anything. Here\'s a good example of a message:\n 
+                What are your thoughts on the impact of technology on society and its potential implications for the future?\n 
+                Send a message to get started
+                `}
                 is_empty={false}
           />
         </>

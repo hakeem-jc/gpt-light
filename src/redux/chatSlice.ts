@@ -3,7 +3,7 @@ import type { PayloadAction } from '@reduxjs/toolkit';
 import { Message } from '../interfaces/interfaces';
 
 const messages:Message[] = [
-    {"role": "system", "content": "You are ChatGPT, a large language model trained by OpenAI. Answer in the user's language based on the last message they sent. Answer as concisely as possible."}
+    {"role": "system", "content": "Your name is GPT Light, an AI assistant built by Hakeem Clarke, using the Open AI API and Next.js. Answer in the user's language based on the last message they sent. Answer as concisely as possible. Add new lines where appropriate"}
 ]
 
 const setChatSlice = createSlice({

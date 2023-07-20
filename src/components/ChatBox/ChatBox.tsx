@@ -13,6 +13,9 @@ interface ChatBoxProps {
 
 const ChatBox:FC<ChatBoxProps> = (props) => {
     const roleClassName = props.role === ChatType.BOT ? styles['chatbox-bot'] : '';
+
+    // Split the content by line breaks and render each line as a separate paragraph
+    const contentLines = !props.content ? [""] : props.content?.split('\n') ;
   
     return (
         <div className={`${styles.chatbox} ${roleClassName}`}>
@@ -32,7 +35,14 @@ const ChatBox:FC<ChatBoxProps> = (props) => {
                     alt={props.role === ChatType.BOT ? "Bot Icon" : "User Icon"}
                     className={styles['image']}
                 />
-            <p className={styles['text']}>{props.content}</p>
+                <div className={styles['text-wrap']}>
+                
+                {contentLines.map((line, index) => (
+                        <p key={index} className={styles['text']}>
+                            {line}
+                        </p>
+                    ))}
+                </div>
             </div>
         }
 
