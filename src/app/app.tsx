@@ -20,12 +20,16 @@ export const App = () => {
 
   const WelcomeMessage = () => {
     return (
-        <section className={styles.empty_chat_container}>
-            <h2 className={styles.title}>Welcome to GPT Light</h2>
-            <p>A partial open source clone of OpenAI&apos;s ChatGPT</p>
-            <h3 className={styles.disclaimer}>Important: GPT Light is 100% unaffiliated with OpenAI.</h3>
-            <p>Send a message to get started</p>
-        </section>
+        <>
+          <ChatBox 
+                role={ChatType.BOT} 
+                content={`Hey. Ask me anything. Here\'s a good example of a message:\n 
+                What are your thoughts on the impact of technology on society and its potential implications for the future?\n 
+                Send a message to get started
+                `}
+                is_empty={false}
+          />
+        </>
     )
   }
 

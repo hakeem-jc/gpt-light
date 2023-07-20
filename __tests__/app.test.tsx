@@ -24,7 +24,7 @@ describe('Page', () => {
       </Provider>
     );
 
-    const welcomeMessage = screen.getByText('Welcome to GPT Light');
+    const welcomeMessage = screen.getByText('Send a message to get started');
     expect(welcomeMessage).toBeInTheDocument();
   });
 
