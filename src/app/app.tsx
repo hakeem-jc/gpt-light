@@ -5,6 +5,7 @@ import ChatBox from '@/components/ChatBox/ChatBox';
 import Form from '@/components/Form/Form';
 import { useAppSelector } from '@/redux/hooks';
 import { ChatType } from '@/interfaces/interfaces';
+import { useTranslation } from 'react-i18next';
 import LogRocket from 'logrocket';
 LogRocket.init('uwhnan/gpt-light');
 
@@ -18,15 +19,21 @@ export const App = () => {
     }
   }, [chat]);
 
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const lng = navigator.language;
+    i18n.changeLanguage(lng);
+  },[])
+
+  const lng = navigator.language;
+
   const WelcomeMessage = () => {
     return (
         <>
           <ChatBox 
                 role={ChatType.BOT} 
-                content={`Hey. Ask me anything. Here\'s a good example of a message:\n 
-                What are your thoughts on the impact of technology on society and its potential implications for the future?\n 
-                Send a message to get started
-                `}
+                content={t('content.instructions')}
                 is_empty={false}
           />
         </>

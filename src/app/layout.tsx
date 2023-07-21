@@ -1,4 +1,6 @@
+'use client';
 import './globals.scss';
+import './i18n';
 
 export const metadata = {
   title: 'GPT Light',
