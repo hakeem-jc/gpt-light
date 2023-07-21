@@ -13,6 +13,7 @@ export const App = () => {
   const chat = useAppSelector(state => state.chat);
   const is_loading = useAppSelector(state => state.is_loading);
   const anchor = useRef<HTMLSpanElement>(null);
+
   useEffect(() => { 
     if (anchor.current) {
       anchor.current.scrollIntoView({ behavior: 'smooth' });
@@ -22,11 +23,10 @@ export const App = () => {
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
+    // @ts-ignore
     const lng = navigator.language;
     i18n.changeLanguage(lng);
   },[])
-
-  const lng = navigator.language;
 
   const WelcomeMessage = () => {
     return (
