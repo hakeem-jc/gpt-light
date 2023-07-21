@@ -23,7 +23,9 @@ i18n
               instructions: `Hey. Ask me anything. Here\'s a good example of a message:\n 
                             What are your thoughts on the impact of technology on society and its potential implications for the future?\n 
                             Send a message to get started
-                            `
+                            `,
+              system_message: `Your name is GPT Light, an expert in a wide range of domains built by Hakeem Clarke, using the Open AI API and Next.js. 
+              Answer in the user's language based on the last message they sent. Answer as concisely as possible. Add new lines where appropriate.`
           }
         }
       },
@@ -32,7 +34,9 @@ i18n
           content: {
               instructions: `Hola. Pregúntame lo que sea. Aquí hay un buen ejemplo de un mensaje:\n
                             ¿Qué piensa sobre el impacto de la tecnología en la sociedad y sus posibles implicaciones para el futuro?\n
-                            Envía un mensaje para empezar`
+                            Envía un mensaje para empezar`,
+              system_message: `Su nombre es GPT Light, un experto en una amplia gama de dominios creados por Hakeem Clarke, utilizando el API de Open AI y Next.js.
+              Responda en el idioma del usuario según el último mensaje que envió. Responde de la forma más concisa posible. Agregue nuevas líneas donde corresponda.`
           }
         }
       }

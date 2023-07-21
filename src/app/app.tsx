@@ -3,13 +3,15 @@ import { useRef, useEffect } from 'react';
 import styles from './app.module.scss';
 import ChatBox from '@/components/ChatBox/ChatBox';
 import Form from '@/components/Form/Form';
-import { useAppSelector } from '@/redux/hooks';
+import { useAppSelector, useAppDispatch, } from '@/redux/hooks';
 import { ChatType } from '@/interfaces/interfaces';
+import { setChat } from '@/redux/chatSlice';
 import { useTranslation } from 'react-i18next';
 import LogRocket from 'logrocket';
 LogRocket.init('uwhnan/gpt-light');
 
 export const App = () => {
+  const dispatch = useAppDispatch();
   const chat = useAppSelector(state => state.chat);
   const is_loading = useAppSelector(state => state.is_loading);
   const anchor = useRef<HTMLSpanElement>(null);
@@ -23,9 +25,13 @@ export const App = () => {
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
+    // Configure language
     // @ts-ignore
     const lng = navigator.language;
     i18n.changeLanguage(lng);
+
+    // Set system message
+    dispatch(setChat({role:"system", content:t('content.system_message')}));
   },[])
 
   const WelcomeMessage = () => {
