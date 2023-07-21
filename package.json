@@ -20,6 +20,8 @@
     "axios": "^1.4.0",
     "eslint": "8.42.0",
     "eslint-config-next": "13.4.4",
+    "i18next": "^23.2.11",
+    "i18next-browser-languagedetector": "^7.1.0",
     "logrocket": "^4.0.3",
     "next": "^13.4.10",
     "nextjs-cors": "^2.1.2",
@@ -27,6 +29,7 @@
     "openai": "^3.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-i18next": "^13.0.2",
     "react-redux": "^8.1.0",
     "sass": "^1.63.6",
     "typescript": "5.1.3"
