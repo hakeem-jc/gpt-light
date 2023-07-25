@@ -1,8 +1,4 @@
-'use client'
-import { Provider } from 'react-redux';
-import { store } from '@/redux/store';
-import { App } from './app';
-import { SnackbarProvider } from 'notistack';
+import Providers from './providers';
 
 export const metadata = {
   title: 'GPT Light',
@@ -13,10 +9,6 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <Provider store={store}>
-      <SnackbarProvider>
-        <App/>
-      </SnackbarProvider>
-    </Provider>
+   <Providers />
   )
 }
