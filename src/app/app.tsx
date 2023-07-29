@@ -1,8 +1,8 @@
 'use client'
 import { useRef, useEffect } from 'react';
 import styles from './app.module.scss';
-import ChatBox from '@/components/ChatBox/ChatBox';
-import Form from '@/components/Form/Form';
+import ChatBox from '@/components/ChatBox';
+import Form from '@/components/Form';
 import { useAppSelector, useAppDispatch, } from '@/redux/hooks';
 import { ChatType } from '@/interfaces/interfaces';
 import { setChat } from '@/redux/chatSlice';
