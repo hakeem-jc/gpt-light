@@ -1,8 +1,8 @@
 'use client'
 import { useRef, useEffect } from 'react';
 import styles from './app.module.scss';
-import ChatBox from '@/components/ChatBox/ChatBox';
-import Form from '@/components/Form/Form';
+import ChatBox from '@/components/ChatBox';
+import Form from '@/components/Form';
 import { useAppSelector, useAppDispatch, } from '@/redux/hooks';
 import { ChatType } from '@/interfaces/interfaces';
 import { setChat } from '@/redux/chatSlice';
@@ -65,7 +65,7 @@ export const App = () => {
 
         <footer className={styles.chat_form_container}>
             <Form />
-            <p className={styles.credits}>© 2023 Hakeem Clarke</p>
+            <p className={styles.credits}>{t('content.footer_message')}</p>
         </footer>
     </main>
   )
