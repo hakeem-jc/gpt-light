@@ -7,12 +7,14 @@ import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 import { setChat } from '@/redux/chatSlice';
 import { setIsLoading } from '@/redux/LoadingSlice';
 import { useSnackbar } from 'notistack';
+import { useTranslation } from 'react-i18next';
 
 const Form:FC  = () => {
   const [formData, setFormData] = useState({message: '',});
   const dispatch = useAppDispatch();
   const chat = useAppSelector(state => state.chat);
   const { enqueueSnackbar }= useSnackbar();
+  const { t } = useTranslation();
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -30,7 +32,7 @@ const Form:FC  = () => {
         dispatch(setIsLoading(false));
             console.error(err);
 
-            enqueueSnackbar('Something went wrong, Try again', {
+            enqueueSnackbar(t('content.error'), {
               variant: 'error',
               preventDuplicate: true,
               anchorOrigin: {
@@ -55,7 +57,7 @@ const Form:FC  = () => {
         id="message"
         name="message"
         className={styles.chat_input}
-        placeholder='Send a message.'
+        placeholder={t('content.placeholder')}
         value={formData.message}
         onChange={handleChange}
         autoComplete='off'
