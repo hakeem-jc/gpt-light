@@ -32,7 +32,7 @@ const Form:FC  = () => {
         dispatch(setIsLoading(false));
             console.error(err);
 
-            enqueueSnackbar('Something went wrong, Try again', {
+            enqueueSnackbar(t('content.error'), {
               variant: 'error',
               preventDuplicate: true,
               anchorOrigin: {
