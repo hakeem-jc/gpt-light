@@ -1,75 +1,69 @@
 
-<div  align="center">
+# GPT Light - A Minimalist Chat GPT Wrapper
 
-<a  href="https://github.com/hakeem-jc/gpt-light">
+Built with the Next.js 13 App Router, TypeScript, Sass, and the Open AI Chat API
 
-</a>
+[View Demo](https://gpt-light.vercel.app/)
 
-  
+## Features
 
-<h3  align="center">GPT Light</h3>
+- 🗣️ **Real-Time AI Communication**: Engage with users instantly using advanced AI capabilities.
+- 💬 **Seamless Chat Interface**: User-friendly and intuitive chat interface for smooth interactions.
+- ⚡ **Instant Response**: Lightning-fast response times to keep the conversation flowing.
+- 🔧 **Built from Scratch**: Developed using modern web technologies for optimal performance.
+- 🌍 **Multilingual Support**:  i18n support for English and Spanish
+- 🧠 **Context-Aware Responses**: AI understands context to provide relevant and meaningful replies.
+- 🚀 **Scalable Architecture**: Designed to handle a growing user base with ease.
+- 🌟 **Modern Design**: Clean and modern user interface for a pleasant user experience.
+- 🔄 **Regular Updates**: Frequent updates with new features and improvements.
+- 🎁 **...and much more**: Continuous enhancements and new features to improve user experience.
+- 
+### Roadmap
 
-  
-<p  align="center">
-
-Minimalist Chat GPT Clone
-Built with Next.js, Redux and TypeScript
-
-<a  href="https://gpt-light.vercel.app/">View Demo</a>
-
-</p>
-
-</div>
-
-<!-- ABOUT THE PROJECT -->
-
-## About The Project
-The application provides an interface to query the GPT 3.5 large language model
-  
-
-### Built With 
-[![Next][Next.js]][Next-url]
+- 🛡️ **Secure Authentication**: Ensure user data protection with robust authentication mechanisms.
+- 🔄 **Persistent Sessions**: Maintain context and continue conversations seamlessly across sessions.
+- 🔍 **Searchable History**: Users can search through past conversations for easy reference.
 
 
-<!-- GETTING STARTED -->
+## Getting Started
 
 ### Prerequisites
 
-Running the application locally requires a .env file with the local server URL and an Open AI key.
- 
+Running the application locally requires a `.env` file with the local server URL and an Open AI key.
+
 ### Installation
 
-1. Sign up and get an Open API Key at [https://platform.openai.com/overview](https://platform.openai.com/overview)
+1. Sign up and get an Open API Key at [Open AI](https://platform.openai.com/overview)
 
 2. Clone the repo
 
-```sh
-git clone https://github.com/hakeem-jc/gpt-light.git
-```
+    ```sh
+    git clone https://github.com/hakeem-jc/gpt-light.git
+    ```
 
 3. Install NPM packages
 
-```sh
-npm install
-```
+    ```sh
+    npm install
+    ```
 
 4. Create `.env` file at root and enter environment variables
 
-```Sh
-NEXT_PUBLIC_API_URL=http://localhost:3000
-OPENAI_API_KEY="OPEN AI KEY"
-```
+    ```sh
+    NEXT_PUBLIC_API_URL=http://localhost:3000
+    OPENAI_API_KEY="OPEN AI KEY"
+    ```
 
 5. Start the project server
-```sh
-npm run dev
-```
 
-<!-- MARKDOWN LINKS & IMAGES -->
-[linkedin-url]: https://www.linkedin.com/in/hakeemclarke/
+    ```sh
+    npm run dev
+    ```
 
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
+## Acknowledgements
 
+- [Open AI](https://platform.openai.com/) for making this project possible
 
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
