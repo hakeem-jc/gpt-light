@@ -20,6 +20,7 @@ Built with the Next.js 13 App Router, TypeScript, Sass, and the Open AI Chat API
 - 
 ### Roadmap
 
+- 💻 **Beautiful landing page** & chat page
 - 🛡️ **Secure Authentication**: Ensure user data protection with robust authentication mechanisms.
 - 🔄 **Persistent Sessions**: Maintain context and continue conversations seamlessly across sessions.
 - 🔍 **Searchable History**: Users can search through past conversations for easy reference.
