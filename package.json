@@ -1,6 +1,6 @@
 {
-  "name": "gpt-light",
-  "version": "0.1.0",
+  "name": "gpt-light-legacy",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
