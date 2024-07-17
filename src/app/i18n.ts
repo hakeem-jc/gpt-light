@@ -25,7 +25,7 @@ i18n
               Answer in the user's language based on the last message they sent. Answer as concisely as possible. Add new lines where appropriate.`,
               placeholder: 'Send a message',
               error: 'Something went wrong, Please try again',
-              footer_message: `© 2024 Hakeem Clarke. This site is not affiliated with ChatGPT or OpenAI. If you thought it was then ... why, thank you`
+              footer_message: `© 2024 Hakeem Clarke`
           }
         }
       },
@@ -37,7 +37,7 @@ i18n
               Responda en el idioma del usuario según el último mensaje que envió. Responde de la forma más concisa posible. Agregue nuevas líneas donde corresponda.`,
               placeholder: 'Manda un mensaje',
               error: 'Algo salió mal. Por favor, vuelva a intentarlo',
-              footer_message: `© 2024 Hakeem Clarke. Este sitio no está afiliado con ChatGPT o OpenAI. Si pensaste que lo estaba, entonces... gracias.`
+              footer_message: `© 2024 Hakeem Clarke`
           }
         }
       }
