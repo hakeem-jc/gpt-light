@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 .app {
   display: flex;
   flex-direction: column;
@@ -27,9 +29,9 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #343541;
+  background-color: $bg_color;
   height: 12%;
-  padding-bottom: 1rem;;
+  padding-bottom: 1rem;
 }
 
 .credits {
