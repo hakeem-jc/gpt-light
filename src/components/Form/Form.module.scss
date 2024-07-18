@@ -1,6 +1,8 @@
+@import "../../app/variables.scss";
+
 .chat_form {
   width: 80%;
-  background-color: #40414F;
+  background-color: $chat_form_color;
   border-radius: 0.75rem;
   display: flex;
   padding: 0.6rem 1rem;
@@ -22,13 +24,13 @@
     background: transparent;
     border: none;
     font-size: 1.4rem;
-    color: #606170;
+    color: $form_button_color;
     padding: 0.4rem 0.5rem;
     cursor: pointer;
     border-radius: 8px;
 
     &:hover {
-      background-color: #19C37D;
+      background-color: $form_button_color_hover;
       color: white;
     }
   }

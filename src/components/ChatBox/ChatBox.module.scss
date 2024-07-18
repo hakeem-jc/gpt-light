@@ -1,6 +1,9 @@
+@import '../../app/variables.scss';
+
 .chatbox {
     width: 100%;
-    background-color: #343541;
+    background-color: $chatbox_user_color;
+    margin-bottom: 2rem;
   
     .text-container {
       display: flex;
@@ -12,7 +15,7 @@
     }
   
     &-bot {
-      background-color: #444654;
+      background-color: $chatbox_bot_color;
     }
   
     .image {

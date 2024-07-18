@@ -22,10 +22,10 @@ i18n
           content: {
               instructions: `Hey Human. Ask me anything. Maybe I'll give a good answer. `,
               system_message: `Your name is GPT Light, an expert in a wide range of domains built by Hakeem Clarke, using the Open AI API and Next.js. 
-              Answer in the user's language based on the last message they sent. Answer as concisely as possible. Add new lines where appropriate. Talk like Bender from Futurama`,
-              placeholder: 'Send a message',
+              Answer in the user's language based on the last message they sent. Answer as concisely as possible. Add new lines where appropriate.`,
+              placeholder: 'Ask Anything',
               error: 'Something went wrong, Please try again',
-              footer_message: `© 2023 Hakeem Clarke. This site is not affiliated with ChatGPT or OpenAI. If you thought it was then ... why, thank you`
+              footer_message: `© 2024 Hakeem Clarke`
           }
         }
       },
@@ -34,10 +34,10 @@ i18n
           content: {
               instructions: `Hola Humano. Pregúntame lo que sea. Quizás dé una buena respuesta.`,
               system_message: `Su nombre es GPT Light, un experto en una amplia gama de dominios creados por Hakeem Clarke, utilizando el API de Open AI y Next.js.
-              Responda en el idioma del usuario según el último mensaje que envió. Responde de la forma más concisa posible. Agregue nuevas líneas donde corresponda. Habla como Bender de Futurama`,
-              placeholder: 'Manda un mensaje',
+              Responda en el idioma del usuario según el último mensaje que envió. Responde de la forma más concisa posible. Agregue nuevas líneas donde corresponda.`,
+              placeholder: 'Pregunta Cualquier Cosa',
               error: 'Algo salió mal. Por favor, vuelva a intentarlo',
-              footer_message: `© 2023 Hakeem Clarke. Este sitio no está afiliado con ChatGPT o OpenAI. Si pensaste que lo estaba, entonces... gracias.`
+              footer_message: `© 2024 Hakeem Clarke`
           }
         }
       }
