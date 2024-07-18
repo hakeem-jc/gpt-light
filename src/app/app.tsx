@@ -49,7 +49,7 @@ export const App = () => {
   return (
     <main className={styles.app}>
         <section className={styles.messages}>
-            {(chat.length === 1 || chat.length === 0) && <WelcomeMessage />}
+            {chat.length === 1 && <WelcomeMessage />}
             {chat.length > 1 && chat.map((message, i)=> {
                 return message.role  !== "system" && 
                 <ChatBox 
