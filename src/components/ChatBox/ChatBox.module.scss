@@ -5,6 +5,7 @@
     background-color: $chatbox_user_color;
     margin-bottom: 2rem;
     font-family: Arial, sans-serif;
+    text-wrap: wrap;
   
     .text-container {
       display: flex;
@@ -13,6 +14,18 @@
   
     .text {
       padding-right: 1rem;
+
+      * {
+        margin: 0;
+      }
+
+      pre {
+        background-color: $bg_color;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        width:fit-content;
+
+      }
     }
   
     &-bot {

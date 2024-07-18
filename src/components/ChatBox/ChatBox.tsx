@@ -4,6 +4,8 @@ import user from "@/assets/user.png";
 import avatar from "@/assets/bot.png";
 import { ChatType } from "@/interfaces/interfaces";
 import Image from "next/image";
+import Markdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 interface ChatBoxProps {
   role?: string;
@@ -30,7 +32,9 @@ const ChatBox: FC<ChatBoxProps> = (props) => {
             className={styles["image"]}
           />
           <div className={styles["text-wrap"]}>
-            <p className={styles["text"]}>{props.content}</p>
+            <p className={styles["text"]}>
+                <Markdown remarkPlugins={[remarkGfm]}>{props.content}</Markdown>
+            </p>
           </div>
         </div>
       )}
