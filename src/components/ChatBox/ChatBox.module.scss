@@ -1,9 +1,12 @@
 @import '../../app/variables.scss';
 
 .chatbox {
-    width: 100%;
+    width: 50%;
+    border-radius: 6px;
     background-color: $chatbox_user_color;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    font-family: Arial, sans-serif;
+    text-wrap: wrap;
   
     .text-container {
       display: flex;
@@ -12,10 +15,23 @@
   
     .text {
       padding-right: 1rem;
+
+      * {
+        margin: 0;
+      }
+
+      pre {
+        background-color: $bg_color;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        width:fit-content;
+
+      }
     }
   
     &-bot {
       background-color: $chatbox_bot_color;
+      margin-left: auto;
     }
   
     .image {
