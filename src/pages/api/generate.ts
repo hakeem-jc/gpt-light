@@ -18,7 +18,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const completion = await openai.chat.completions.create({
       messages,
-      model: "gpt-3.5-turbo",
+      model: "gpt-4o-2024-05-13",
     });
 
     res.status(200).json({ result: completion.choices[0] });
