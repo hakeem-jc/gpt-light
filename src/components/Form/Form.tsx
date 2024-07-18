@@ -27,7 +27,7 @@ const Form:FC  = () => {
     axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/generate`, payload)
     .then((res)=>{
         dispatch(setIsLoading(false));
-        dispatch(setChat({role:"assistant", content:res.data.result}));
+        dispatch(setChat({role:"assistant", content:res?.data?.result?.message?.content}));
         }).catch((err)=>{
         dispatch(setIsLoading(false));
             console.error(err);
