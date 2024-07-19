@@ -7,6 +7,8 @@
     margin-bottom: 1rem;
     font-family: Arial, sans-serif;
     text-wrap: wrap;
+    padding-bottom: 1rem;
+
   
     .text-container {
       display: flex;
@@ -25,7 +27,6 @@
         padding: 1rem;
         border-radius: 0.5rem;
         width:fit-content;
-
       }
     }
   
@@ -49,6 +50,10 @@
       width: 0.7rem;
       height: 1rem;
       margin-top: 1.1rem;
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
     }
   }
   
