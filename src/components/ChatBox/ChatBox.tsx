@@ -14,11 +14,8 @@ interface ChatBoxProps {
 }
 
 const ChatBox: FC<ChatBoxProps> = (props) => {
-  const roleClassName =
-    props.role === ChatType.BOT ? styles["chatbox-bot"] : "";
-
   return (
-    <pre className={`${styles.chatbox} ${roleClassName}`}>
+    <pre className={styles.chatbox}>
       {props.is_empty ? (
         <div className={styles["text-container"]}>
           <Image src={avatar} alt="Bot Icon" className={styles["image"]} />

@@ -1,7 +1,7 @@
 @import '../../app/variables.scss';
 
 .chatbox {
-    width: 50%;
+    width: 80%;
     border-radius: 6px;
     background-color: $chatbox_user_color;
     margin-bottom: 1rem;
@@ -28,11 +28,6 @@
         border-radius: 0.5rem;
         width:fit-content;
       }
-    }
-  
-    &-bot {
-      background-color: $chatbox_bot_color;
-      margin-left: auto;
     }
   
     .image {
